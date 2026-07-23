@@ -1,217 +1,244 @@
 <!doctype html>
-<html lang="en">
+<html lang="bg">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#050a18" />
-  <meta name="description" content="Ganexity LLM Frontier Map — an investor-grade, end-to-end map of governed AI from request to next generation." />
-  <title>Ganexity // LLM Frontier Map</title>
+  <meta name="theme-color" content="#040917" />
+  <meta name="description" content="Ganexity LLM Vision Map — bilingual investor presentation of a governed, end-to-end AI operating system." />
+  <title>Ganexity // LLM Vision Map</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="ambient ambient-a"></div>
-  <div class="ambient ambient-b"></div>
-  <div class="scanlines" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="aurora aurora-one" aria-hidden="true"></div>
+  <div class="aurora aurora-two" aria-hidden="true"></div>
 
-  <header class="topbar">
-    <div class="brand-lockup">
-      <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-orbit" aria-hidden="true"><i></i><i></i><i></i></span>
       <div>
-        <p class="eyebrow">GANEXITY // COGNITIVE INFRASTRUCTURE</p>
-        <h1>LLM FRONTIER MAP</h1>
+        <p class="mono-kicker">GANEXITY // COGNITIVE INFRASTRUCTURE</p>
+        <h1>LLM VISION MAP <em>V3</em></h1>
       </div>
     </div>
 
-    <div class="topbar-center" aria-label="Presentation thesis">
-      <span class="status-dot"></span>
-      <span>FROM ONE REQUEST TO THE NEXT MODEL GENERATION</span>
+    <div class="header-thesis">
+      <span class="live-dot"></span>
+      <span data-i18n="headerThesis">ОТ НАМЕРЕНИЕ ДО СЛЕДВАЩО ПОКОЛЕНИЕ</span>
     </div>
 
-    <div class="top-actions">
-      <button class="ghost-button" id="printButton" type="button" title="Print or save as PDF">EXPORT</button>
-      <button class="primary-button" id="fullscreenButton" type="button">PRESENT</button>
+    <div class="header-actions">
+      <div class="language-switch" role="group" aria-label="Language">
+        <button type="button" class="language-button is-active" data-lang="bg">BG</button>
+        <button type="button" class="language-button" data-lang="es">ES</button>
+      </div>
+      <button type="button" class="utility-button" id="printButton" data-i18n="export">PDF</button>
+      <button type="button" class="presentation-button" id="fullscreenButton" data-i18n="present">ПРЕЗЕНТАЦИЯ</button>
     </div>
   </header>
 
-  <main class="app-shell">
-    <aside class="side-panel left-panel" aria-label="Architecture legend">
-      <section class="panel-section thesis-section">
-        <p class="section-kicker">INVESTMENT THESIS</p>
-        <h2>AI is not a model.<br />It is a governed living system.</h2>
-        <p>The durable platform is the control architecture around inference: identity, memory, tools, safeguards, telemetry and evolutionary feedback.</p>
-      </section>
-
-      <section class="panel-section">
-        <div class="section-heading">
-          <p class="section-kicker">FLOW CHANNELS</p>
-          <span class="micro-label">SELECT TO ISOLATE</span>
-        </div>
-        <div class="legend-list" id="flowLegend"></div>
-      </section>
-
-      <section class="panel-section cadence-panel">
-        <p class="section-kicker">SYSTEM CADENCE</p>
-        <div class="cadence-scale" aria-label="System cadence scale">
-          <span>ms</span><span>s</span><span>min</span><span>h</span><span>d</span><span>w</span><span>mo</span><span>y</span>
-        </div>
-        <p class="cadence-copy">The strategic risk is not only intelligence. It is the mismatch between machine-speed change and human-speed oversight.</p>
-      </section>
-
-      <section class="panel-section compact-section">
-        <p class="section-kicker">NON-NEGOTIABLE INVARIANTS</p>
-        <ol class="invariant-list">
-          <li>Weights do not change live.</li>
-          <li>Tool output is untrusted input.</li>
-          <li>Safeguards exist at four positions.</li>
-          <li>The real kill switch is external.</li>
-          <li>Selection pressure shapes the next generation.</li>
-        </ol>
-      </section>
-    </aside>
-
-    <section class="stage" aria-label="Interactive LLM system map">
-      <div class="stage-toolbar">
-        <div class="chapter-controls">
-          <button class="icon-button" id="previousChapter" type="button" aria-label="Previous chapter">←</button>
-          <div class="chapter-readout">
-            <span id="chapterIndex">01 / 06</span>
-            <strong id="chapterTitle">THE SYSTEM, NOT THE CHATBOT</strong>
-          </div>
-          <button class="icon-button" id="nextChapter" type="button" aria-label="Next chapter">→</button>
-          <button class="play-button" id="playButton" type="button" aria-pressed="false"><span class="play-icon">▶</span> AUTO STORY</button>
-        </div>
-
-        <div class="viewport-controls">
-          <button class="icon-button" id="zoomOut" type="button" aria-label="Zoom out">−</button>
-          <span id="zoomReadout">70%</span>
-          <button class="icon-button" id="zoomIn" type="button" aria-label="Zoom in">+</button>
-          <button class="ghost-button compact" id="resetView" type="button">RESET VIEW</button>
-        </div>
+  <main class="page-shell">
+    <section class="hero-card" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="mono-kicker" data-i18n="heroKicker">ИНВЕСТИТОРСКА КАРТА НА УПРАВЛЯВАН AI</p>
+        <h2 id="heroTitle"><span data-i18n="heroTitleStrong">ТОВА НЕ Е МОДЕЛ.</span> <span data-i18n="heroTitleLight">ТОВА Е ЖИВА ОПЕРАЦИОННА СИСТЕМА.</span></h2>
+        <p class="hero-summary" data-i18n="heroSummary">
+          Ganexity превръща един LLM в контролирана цифрова организация: идентичност, памет, инструменти, защити, телеметрия и еволюция работят като една система.
+        </p>
       </div>
 
-      <div class="narrative-card" id="narrativeCard">
-        <div class="narrative-number" id="narrativeNumber">01</div>
-        <div>
-          <p class="section-kicker" id="narrativeKicker">THE CATEGORY SHIFT</p>
-          <h3 id="narrativeHeading">The product is a control system around intelligence.</h3>
-          <p id="narrativeBody">The model is one component inside a multi-speed architecture that governs identity, context, action, memory, safety and evolution.</p>
-        </div>
+      <div class="hero-signal">
+        <div class="signal-core"><span>+1</span><small>META CONTROL</small></div>
+        <div class="signal-ring ring-a"></div>
+        <div class="signal-ring ring-b"></div>
+        <div class="signal-ring ring-c"></div>
       </div>
 
-      <div class="map-viewport" id="mapViewport">
-        <svg id="systemMap" viewBox="0 0 2320 1420" role="img" aria-labelledby="mapTitle mapDescription">
-          <title id="mapTitle">Ganexity end-to-end LLM frontier architecture</title>
-          <desc id="mapDescription">An interactive diagram showing external sovereignty, laboratory training, control plane, identity, input, routing, local controller, memory, context, inference, tools, safeguards, output, telemetry and next-generation feedback loops.</desc>
-          <defs>
-            <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="7" result="blur" />
-              <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-            </filter>
-            <filter id="strongGlow" x="-70%" y="-70%" width="240%" height="240%">
-              <feGaussianBlur stdDeviation="13" result="blur" />
-              <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-            </filter>
-            <marker id="arrow-ctrl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2ec4ff" /></marker>
-            <marker id="arrow-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ffb020" /></marker>
-            <marker id="arrow-exec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#00e5a0" /></marker>
-            <marker id="arrow-fb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9f7aea" /></marker>
-            <marker id="arrow-gen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ff6ec7" /></marker>
-            <marker id="arrow-adv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ff4d5f" /></marker>
-            <linearGradient id="canvasGradient" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#071123" />
-              <stop offset="55%" stop-color="#050a18" />
-              <stop offset="100%" stop-color="#090518" />
-            </linearGradient>
-            <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#233653" stroke-width="1" opacity="0.22" />
-            </pattern>
-          </defs>
-          <rect width="2320" height="1420" fill="url(#canvasGradient)" />
-          <rect width="2320" height="1420" fill="url(#gridPattern)" />
-          <g id="viewport">
-            <g id="layerBackplates"></g>
-            <g id="edgeLayer"></g>
-            <g id="nodeLayer"></g>
-            <g id="annotationLayer"></g>
-          </g>
-        </svg>
+      <div class="metric-strip" aria-label="Architecture metrics">
+        <div class="metric-pill cyan"><strong>18</strong><span data-i18n="metricLayers">СЛОЯ</span></div>
+        <div class="metric-pill violet"><strong>06</strong><span data-i18n="metricFlows">ПОТОКА</span></div>
+        <div class="metric-pill green"><strong>04</strong><span data-i18n="metricGuards">ЗАЩИТНИ ПОЗИЦИИ</span></div>
+        <div class="metric-pill amber"><strong>08</strong><span data-i18n="metricThreats">ВЕКТОРА НА АТАКА</span></div>
+        <div class="metric-pill pink"><strong>24/7</strong><span data-i18n="metricAutonomy">УПРАВЛЯВАНА АВТОНОМИЯ</span></div>
       </div>
-
-      <div class="map-hint"><span>DRAG</span> to navigate · <span>SCROLL</span> to zoom · <span>CLICK</span> any node for the operating logic</div>
     </section>
 
-    <aside class="side-panel right-panel" aria-label="System intelligence and risk panel">
-      <section class="panel-section system-pulse">
-        <div class="section-heading">
-          <p class="section-kicker">SYSTEM PULSE</p>
-          <span class="live-pill">LIVE</span>
+    <section class="architecture-card">
+      <div class="architecture-header">
+        <div>
+          <p class="mono-kicker" data-i18n="mapKicker">ВИЗУАЛНА ОПЕРАЦИОННА КАРТА</p>
+          <h3 data-i18n="mapTitle">Пълна архитектура: от входа до наследяването</h3>
         </div>
-        <div class="pulse-grid">
-          <div><span>18</span><small>ARCHITECTURE LAYERS</small></div>
-          <div><span>06</span><small>FLOW CHANNELS</small></div>
-          <div><span>08</span><small>ADVERSARIAL VECTORS</small></div>
-          <div><span>04</span><small>SAFEGUARD POSITIONS</small></div>
+        <div class="architecture-meta">
+          <span><i class="meta-dot cyan-dot"></i><b data-i18n="mapMode">LIVE SYSTEM FLOW</b></span>
+          <span class="meta-separator">/</span>
+          <span data-i18n="mapHint">избери елемент за детайл</span>
         </div>
-      </section>
+      </div>
 
-      <section class="panel-section inspector" id="inspector">
-        <div class="section-heading">
-          <p class="section-kicker">NODE INSPECTOR</p>
-          <span class="micro-label" id="inspectorTick">SELECT A NODE</span>
-        </div>
-        <h2 id="inspectorTitle">Architecture intelligence</h2>
-        <p id="inspectorSummary">Every node exposes its input, output, operating cadence, failure mode and strategic meaning.</p>
-        <div class="inspector-grid">
-          <div><small>INPUT</small><p id="inspectorInput">—</p></div>
-          <div><small>OUTPUT</small><p id="inspectorOutput">—</p></div>
-        </div>
-        <div class="failure-box">
-          <small>PRIMARY FAILURE MODE</small>
-          <p id="inspectorFailure">Select a node on the map.</p>
-        </div>
-      </section>
+      <div class="workspace">
+        <aside class="legend-panel">
+          <section>
+            <p class="panel-label" data-i18n="legendTitle">ПОТОЦИ</p>
+            <div id="flowLegend" class="flow-legend"></div>
+          </section>
 
-      <section class="panel-section risk-section">
-        <div class="section-heading">
-          <p class="section-kicker">HIGH-VALUE ATTACK SURFACE</p>
-          <span class="danger-label">ADV</span>
-        </div>
-        <div class="risk-stack">
-          <button type="button" data-focus="A5"><span>A5</span><div><strong>Memory poisoning</strong><small>Persistent across sessions</small></div></button>
-          <button type="button" data-focus="A6"><span>A6</span><div><strong>Corpus poisoning</strong><small>Inherited across generations</small></div></button>
-          <button type="button" data-focus="A7"><span>A7</span><div><strong>Control-plane access</strong><small>Population-wide impact</small></div></button>
-          <button type="button" data-focus="A8"><span>A8</span><div><strong>Supply-chain compromise</strong><small>Systemic trust failure</small></div></button>
-        </div>
-      </section>
+          <section class="tempo-section">
+            <p class="panel-label" data-i18n="tempoTitle">СИСТЕМЕН ТАКТ</p>
+            <div class="tempo-scale">
+              <span>ms</span><span>s</span><span>min</span><span>h</span><span>d</span><span>w</span><span>mo</span><span>y</span>
+            </div>
+            <p data-i18n="tempoCopy">Ключовият риск е разминаването между машинната скорост на промяна и човешката скорост на надзор.</p>
+          </section>
 
-      <section class="panel-section compact-section moat-section">
-        <p class="section-kicker">THE COMPOUNDING MOAT</p>
-        <p class="moat-equation"><span>CONTROL</span> × <span>MEMORY</span> × <span>ACTION</span> × <span>FEEDBACK</span></p>
-        <p>Each completed task improves orchestration, evaluation and future generation quality — without mutating production weights live.</p>
-      </section>
-    </aside>
+          <section class="thesis-panel">
+            <p class="panel-label" data-i18n="thesisTitle">ИНВЕСТИЦИОННА ТЕЗА</p>
+            <blockquote data-i18n="thesisCopy">Победителят няма да притежава само най-силния модел. Ще притежава control plane-а около интелекта.</blockquote>
+          </section>
+        </aside>
+
+        <div class="map-column">
+          <div class="map-viewport" id="mapViewport">
+            <svg id="systemMap" viewBox="0 0 2400 1500" role="img" aria-labelledby="svgTitle svgDescription">
+              <title id="svgTitle">Ganexity end-to-end governed LLM architecture</title>
+              <desc id="svgDescription">Bilingual investor map of an AI operating system from external sovereignty and model training through runtime execution, memory, telemetry and next-generation inheritance.</desc>
+              <defs>
+                <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="8" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <filter id="particleGlow" x="-100%" y="-100%" width="300%" height="300%">
+                  <feGaussianBlur stdDeviation="5" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <linearGradient id="canvasGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#071328"/>
+                  <stop offset="48%" stop-color="#050b19"/>
+                  <stop offset="100%" stop-color="#0a071a"/>
+                </linearGradient>
+                <radialGradient id="coreGradient" cx="50%" cy="50%" r="65%">
+                  <stop offset="0%" stop-color="#162c52"/>
+                  <stop offset="55%" stop-color="#0a1630"/>
+                  <stop offset="100%" stop-color="#050a18"/>
+                </radialGradient>
+                <pattern id="microGrid" width="36" height="36" patternUnits="userSpaceOnUse">
+                  <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#233757" stroke-width="1" opacity=".2"/>
+                  <circle cx="1" cy="1" r="1" fill="#47719b" opacity=".26"/>
+                </pattern>
+                <marker id="arrow-CTRL" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#39d0ff"/>
+                </marker>
+                <marker id="arrow-DATA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#ffb454"/>
+                </marker>
+                <marker id="arrow-EXEC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#26f2ae"/>
+                </marker>
+                <marker id="arrow-FB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#9f88ff"/>
+                </marker>
+                <marker id="arrow-GEN" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#ff72c7"/>
+                </marker>
+                <marker id="arrow-ADV" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#ff5d6c"/>
+                </marker>
+              </defs>
+              <rect width="2400" height="1500" fill="url(#canvasGradient)"/>
+              <rect width="2400" height="1500" fill="url(#microGrid)"/>
+              <g id="viewport">
+                <g id="layerBackplates"></g>
+                <g id="edgeLayer"></g>
+                <g id="particleLayer"></g>
+                <g id="nodeLayer"></g>
+                <g id="annotationLayer"></g>
+              </g>
+            </svg>
+          </div>
+          <div class="map-caption">
+            <span data-i18n="dragHint">Плъзни за навигация · скрол за мащаб · клик върху елемент за логиката му</span>
+            <span class="flow-status"><i></i><b data-i18n="particlesLive">ПОТОЦИТЕ СА АКТИВНИ</b></span>
+          </div>
+        </div>
+
+        <aside class="inspector-panel">
+          <section class="inspector-card">
+            <div class="inspector-head">
+              <div>
+                <p class="panel-label" data-i18n="inspectorTitle">ИНТЕЛИГЕНТНОСТ НА ЕЛЕМЕНТА</p>
+                <span id="inspectorLayer">L6</span>
+              </div>
+              <span id="inspectorTick">s</span>
+            </div>
+            <h4 id="inspectorName">Локален +1 контролер</h4>
+            <p id="inspectorSubtitle">планиране · бюджет · стоп</p>
+
+            <div class="inspector-data">
+              <div><small data-i18n="inputLabel">ВХОД</small><p id="inspectorInput">цел, права, бюджет, инструменти</p></div>
+              <div><small data-i18n="outputLabel">ИЗХОД</small><p id="inspectorOutput">ограничен план за изпълнение</p></div>
+            </div>
+
+            <div class="risk-box">
+              <small data-i18n="failureLabel">ОСНОВЕН РЕЖИМ НА ОТКАЗ</small>
+              <p id="inspectorFailure">Грешна декомпозиция създава цикъл или частично необратимо действие.</p>
+            </div>
+
+            <div class="strategic-box">
+              <small data-i18n="strategicLabel">СТРАТЕГИЧЕСКО ЗНАЧЕНИЕ</small>
+              <p id="inspectorStrategy">+1 е лостовият слой над модела: избира стратегия, контекст, compute, инструменти, критерии за стоп и ескалация.</p>
+            </div>
+          </section>
+
+          <section class="invariant-card">
+            <p class="panel-label" data-i18n="invariantsTitle">НЕПРОМЕНИМИ ПРАВИЛА</p>
+            <ol id="invariantList"></ol>
+          </section>
+
+          <section class="moat-card">
+            <p class="panel-label" data-i18n="moatTitle">КОМПАУНДИРАЩ МОАТ</p>
+            <p class="moat-equation"><span>CONTROL</span><b>×</b><span>MEMORY</span><b>×</b><span>ACTION</span><b>×</b><span>FEEDBACK</span></p>
+            <p data-i18n="moatCopy">Всяка завършена задача подобрява оркестрацията, оценката и бъдещото поколение — без live промяна на production weights.</p>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <section class="investor-strip">
+      <div>
+        <p class="mono-kicker" data-i18n="whyNowKicker">ЗАЩО СЕГА</p>
+        <h3 data-i18n="whyNowTitle">Моделите се комодитизират. Контролът, паметта и изпълнението се превръщат в платформата.</h3>
+      </div>
+      <div class="investor-points">
+        <article><span>01</span><h4 data-i18n="pointOneTitle">Управлявана автономия</h4><p data-i18n="pointOneCopy">Отворената агентивност се превръща в измерима, обратима и бюджетирана операция.</p></article>
+        <article><span>02</span><h4 data-i18n="pointTwoTitle">Натрупващ се контекст</h4><p data-i18n="pointTwoCopy">Паметта и резултатите създават непрехвърляемо организационно предимство.</p></article>
+        <article><span>03</span><h4 data-i18n="pointThreeTitle">Еволюционен flywheel</h4><p data-i18n="pointThreeCopy">Телеметрията се превръща в evals, политики и следващо поколение без риск от live weight drift.</p></article>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer-bar">
-    <div><span class="footer-label">SOURCE OF TRUTH</span> system-flow-spec-v2.md</div>
-    <div class="footer-thesis">THE WINNER OWNS THE CONTROL PLANE AROUND INTELLIGENCE.</div>
-    <div><span class="footer-label">VERSION</span> INVESTOR MAP 1.0</div>
+  <footer class="site-footer">
+    <div><span data-i18n="sourceLabel">ИЗТОЧНИК</span> system-flow-spec-v2.md</div>
+    <strong data-i18n="footerThesis">GANEXITY // THE CONTROL PLANE AROUND INTELLIGENCE</strong>
+    <div><span data-i18n="versionLabel">ВЕРСИЯ</span> INVESTOR V3.0</div>
   </footer>
 
-  <div class="modal-backdrop" id="modalBackdrop" hidden>
-    <article class="node-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
-      <p class="section-kicker" id="modalLayer">LAYER</p>
-      <h2 id="modalTitle">Node</h2>
-      <p id="modalSummary"></p>
+  <div class="node-modal" id="nodeModal" hidden>
+    <div class="node-modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <p class="panel-label" id="modalLayer">LAYER</p>
+      <h3 id="modalTitle">Node</h3>
+      <p id="modalSubtitle"></p>
       <div class="modal-grid">
-        <div><small>INPUT</small><p id="modalInput"></p></div>
-        <div><small>OUTPUT</small><p id="modalOutput"></p></div>
-        <div><small>CADENCE</small><p id="modalTick"></p></div>
-        <div><small>FAILURE MODE</small><p id="modalFailure"></p></div>
+        <div><small data-i18n="inputLabel">ВХОД</small><p id="modalInput"></p></div>
+        <div><small data-i18n="outputLabel">ИЗХОД</small><p id="modalOutput"></p></div>
+        <div><small data-i18n="cadenceLabel">ТАКТ</small><p id="modalTick"></p></div>
+        <div><small data-i18n="failureLabel">ОСНОВЕН РЕЖИМ НА ОТКАЗ</small><p id="modalFailure"></p></div>
       </div>
-      <div class="strategic-box"><small>STRATEGIC MEANING</small><p id="modalStrategy"></p></div>
-    </article>
+      <div class="strategic-box modal-strategy">
+        <small data-i18n="strategicLabel">СТРАТЕГИЧЕСКО ЗНАЧЕНИЕ</small>
+        <p id="modalStrategy"></p>
+      </div>
+    </div>
   </div>
 
   <script src="app.js"></script>
