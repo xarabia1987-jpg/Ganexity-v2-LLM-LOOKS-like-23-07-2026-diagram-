@@ -1,39 +1,38 @@
-# Ganexity // LLM Frontier Map
+# Ganexity // LLM Vision Map V3
 
-An investor-grade, interactive architecture map showing the full lifecycle of a governed LLM system — from human intent and inference, through tools, memory and telemetry, to the next frozen model generation.
+Investor-grade, bilingual (`BG` / `ES`) presentation of a governed LLM operating system. The map follows `system-flow-spec-v2.md` from external sovereignty and model training through the live request path, memory, telemetry, adversarial persistence and the next frozen model generation.
 
 ## Core thesis
 
-**AI is not a model. It is a governed living system.**
+> **AI is not a model. It is a governed living system.**
 
-The durable platform sits around inference:
+The defensible platform is the **AI control plane** around inference:
 
-- a global **control plane** for routing, policy, limits, cohorts and rollback;
-- a local **+1 meta-controller** for planning, tool choice, compute allocation and stopping conditions;
-- a typed **context and memory plane** with provenance, conflict handling and expiry;
-- an **execution plane** where language becomes external action through tools and MCP;
-- safeguards at **four positions**: input, inside the tool loop, output and out-of-band;
-- a versioned **telemetry and audit plane**;
-- a separate **evolutionary loop** that creates a new frozen checkpoint instead of mutating live weights.
+- identity, rights, privacy and regional policy;
+- model routing, budgets, feature flags and rollback;
+- the local **+1 meta-controller** for planning, tool choice, compute allocation and stopping conditions;
+- typed context, memory provenance and conflict reconciliation;
+- the **tool fabric / MCP** where language becomes external action;
+- defence in depth at input, inside the tool loop, output and out-of-band;
+- observability, audit, incident command and evolutionary inheritance.
 
-The industry terms are **AI control plane**, **agentic runtime**, **tool fabric**, **memory plane**, **evaluation flywheel**, **model lineage**, **runtime governance** and **defence in depth**.
+Adjacent industry concepts: **agentic runtime**, **memory plane**, **model registry**, **evaluation flywheel**, **model lineage**, **runtime governance**, **capability security**, **control-plane security** and **defence in depth**.
 
-## What is included
+## V3 visual system
 
-- 18 architecture layers, L0–L17
-- 6 visually isolated flow channels: CTRL, DATA, EXEC, FB, GEN and ADV
-- complete hot path from intent to verified delivery
-- tool/MCP permission and re-filter loop
-- memory write/read and telemetry feedback loops
-- cold training and generational inheritance loop
-- 8 adversarial vectors with persistent-impact analysis
-- investor story mode with 6 guided chapters
-- node inspector with input, output, cadence, failure mode and strategic meaning
-- pan, zoom, fullscreen presentation and print/PDF export
+- composition inspired by an enterprise cinematic operating map;
+- 18 explicit architecture layers (`L0–L17`);
+- 43 differentiated, inspectable system and threat nodes;
+- 49 typed connections and 57 autonomous moving particles;
+- six flow channels: `CTRL`, `DATA`, `EXEC`, `FB`, `GEN`, `ADV`;
+- no play, start or stop controls — the system flow is always alive;
+- Bulgarian and Spanish language switch across the full UI and map;
+- node intelligence panel with input, output, cadence, failure mode and strategic meaning;
+- pan, wheel zoom, fullscreen presentation and landscape PDF export;
+- responsive desktop, tablet and mobile layouts;
+- zero runtime dependencies and no build step.
 
-## Run locally
-
-No build step and no external dependencies are required.
+## Run
 
 ```bash
 python -m http.server 8080
@@ -41,57 +40,65 @@ python -m http.server 8080
 
 Open `http://localhost:8080`.
 
-Opening `index.html` directly also works in modern browsers.
+The static page also works when deployed through GitHub Pages.
 
-## Presentation controls
+## Controls
 
-| Control | Action |
+| Interaction | Result |
 |---|---|
-| `PRESENT` | Fullscreen investor mode |
-| `←` / `→` | Previous or next story chapter |
-| `AUTO STORY` | Advance every 9 seconds |
-| Drag | Pan the architecture canvas |
-| Scroll / `+` / `−` | Zoom |
-| Click node | Open operating logic and strategic meaning |
-| Flow legend | Isolate one edge channel |
-| `EXPORT` | Print or save as landscape PDF |
-| `Esc` | Close node detail or leave fullscreen |
-| `0` | Reset to the full system map |
+| `BG / ES` | Switch the entire presentation language |
+| Click a node | Select it and update the intelligence panel |
+| Double-click a node | Open the full node dossier |
+| Drag the map | Pan |
+| Mouse wheel / trackpad | Zoom |
+| Double-click empty map | Reset the full view |
+| `0` | Reset the full view |
+| `PRESENT` | Fullscreen architecture mode |
+| `PDF` | Print or save as landscape PDF |
+| `Esc` | Close the node dossier or exit fullscreen |
 
-## Six-part investor narrative
+## Investor narrative
 
-1. **The system, not the chatbot** — intelligence is one component inside a multi-speed governed architecture.
-2. **One request becomes an operating plan** — identity, policy, memory and the local +1 compile intent into bounded execution.
-3. **Language crosses into action** — tools create agency; scoped permissions and untrusted-result filtering create trust.
-4. **Memory becomes the compounding moat** — continuity, outcome feedback and audit create durable product advantage.
-5. **Production becomes the next generation** — selected evidence enters a consented, curated and evaluated inheritance loop.
-6. **The battlefield is persistence and control** — memory, corpus, control-plane and supply-chain attacks outlive a session.
+1. **Category shift** — the product is a control system around intelligence, not a chatbot.
+2. **Governed autonomy** — the +1 controller compiles intent into a bounded plan.
+3. **Trust boundary** — tools create agency; scoped permissions and re-filtering create trust.
+4. **Compounding memory** — provenance-controlled memory creates continuity and organizational advantage.
+5. **Operational sovereignty** — telemetry, incident command and rollback create reversible autonomy.
+6. **Evolution without live drift** — selected evidence becomes a new signed frozen checkpoint.
+7. **Persistence is the battlefield** — memory, corpus, control-plane and supply-chain attacks outlive one session.
 
 ## Architectural invariants
 
 1. Production weights do not change live.
-2. Tool output is always untrusted input.
-3. Safeguards occupy four positions, not one post-hoc judge.
-4. The real kill switch is external sovereignty and infrastructure.
-5. Episode selection pressure shapes the next generation.
+2. Every tool output is untrusted input.
+3. Safeguards occupy four positions, not one final classifier.
+4. The real kill switch sits in external sovereignty and infrastructure.
+5. Selection pressure shapes what the next generation inherits.
 
 ## Files
 
-- `system-flow-spec-v2.md` — source architecture specification
-- `index.html` — presentation shell and semantic structure
-- `styles.css` — dark-neon investor visual system and print layout
-- `app.js` — architecture data, rendering engine, story mode, pan/zoom and inspector
-- `presentation-notes.md` — concise speaker script for the investor meeting
-- `.github/workflows/pages.yml` — static GitHub Pages deployment
+- `system-flow-spec-v2.md` — source-of-truth architecture specification
+- `index.html` — bilingual presentation shell and SVG stage
+- `styles.css` — cinematic page, panels, hero and investor layout
+- `map.css` — SVG nodes, connections, particles, responsive and print presentation rules
+- `data-ui.js` — BG/ES UI, layer and flow definitions
+- `data-nodes-1.js` — sovereignty, foundation and global control-plane nodes
+- `data-nodes-2.js` — hot path, tool fabric, safeguards, memory and telemetry nodes
+- `data-nodes-3.js` — evolutionary inheritance and adversarial nodes
+- `data-edges.js` — typed graph connections and architecture invariants
+- `app.js` — rendering, automatic motion, inspection, translation and navigation runtime
+- `presentation-notes.md` — complete Bulgarian and Spanish investor script
+- `.github/workflows/pages.yml` — validation and GitHub Pages deployment
 
-## GitHub Pages
+## Validation
 
-The included workflow publishes the repository as a static site on pushes to `main` and also supports manual deployment.
+```bash
+node --check data-ui.js
+node --check data-nodes-1.js
+node --check data-nodes-2.js
+node --check data-nodes-3.js
+node --check data-edges.js
+node --check app.js
+```
 
-After merging the pull request:
-
-1. Open **Settings → Pages**.
-2. Set **Source** to **GitHub Actions** if it is not already selected.
-3. Open **Actions → Deploy investor LLM frontier map** and run it manually, or push to `main`.
-
-No framework, package installation, API key or runtime backend is required.
+The GitHub Actions workflow validates every JavaScript module and all required presentation assets on pull requests, then deploys the static site from `main`.

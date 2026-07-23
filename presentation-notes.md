@@ -1,91 +1,125 @@
-# Ganexity LLM Frontier Map — Investor Presentation Notes
+# Ganexity LLM Vision Map V3 — Investor Presentation Notes
 
-## Opening — 20 seconds
+## Български — 6–7 минути
 
-What looks like a chatbot is actually a multi-speed operating system around intelligence. The model is only the inference core. The defensible platform is the architecture that decides which intelligence runs, what it may know, what it may do, when it must stop, what becomes memory and what is allowed to influence the next generation.
+### 0:00–0:30 · Категорийна промяна
 
-## Chapter 1 — The category shift
+Това, което изглежда като чатбот, реално е многостепенна операционна система около интелекта. Моделът е inference core. Защитимият бизнес е архитектурата, която решава кой модел работи, какво може да знае, какво може да направи, кога трябва да спре, какво става памет и какво може да повлияе на следващото поколение.
 
-The map runs from milliseconds to years.
+### 0:30–1:20 · Три скорости, една система
 
-At the centre is one request. Around it are identity, policy, model routing, memory, tools, safeguards, telemetry and generational learning. Above it sit the laboratory, infrastructure, law and sovereign permission to operate.
+Картата разделя системата на три такта:
 
-The category is not “LLM application.” The industry term is **governed agentic runtime with an AI control plane**.
+- `ms–s`: горещият път на една задача;
+- `min–h`: control plane, telemetry, policy и rollback;
+- `w–mo`: training, evals и нов frozen checkpoint.
 
-## Chapter 2 — One request becomes an operating plan
+Стратегическият риск не е само интелектът. Това е разминаването между машинната скорост на промяна и човешката скорост на надзор.
 
-A request does not go directly to a model.
+### 1:20–2:20 · +1 meta-controller
 
-First, the system resolves identity, contract, region, privacy and quotas. It filters the input, selects a model and execution tier, then hands the goal to the local **+1 meta-controller**.
+След identity, input filtering и routing заявката стига до локалния `+1`. Това е leverage layer-ът над модела. Той избира стратегия, роли, контекст, compute, инструменти, бюджет, критерии за стоп и ескалация.
 
-The +1 decides whether the task is single-shot or agentic, assigns token, time, cost and step budgets, chooses tools, retrieves memory and defines stopping and escalation conditions.
+Моделът генерира възможности. `+1` превръща възможностите в ограничена, измерима операция.
 
-Context assembly then compiles system rules, policy, identity, memory, tool schemas, history and the current request into the bounded state seen by inference.
+### 2:20–3:20 · От език към действие
 
-## Chapter 3 — Language crosses into action
+Tool fabric / MCP е мястото, където езикът пресича границата към външния свят: браузър, API, код, файлове, плащания.
 
-The decisive boundary is not between one model and another. It is between language and external effect.
+Затова всеки tool result се връща като **untrusted input**. Permission gate преди действието и re-filter след действието са trust boundary-ът на agentic runtime.
 
-When the model proposes a tool call, the action crosses a scoped permission gate. The system checks identity, action scope, reversibility and whether explicit approval is required.
+### 3:20–4:10 · Паметта като moat
 
-The tool may be an API, browser, code sandbox, MCP server, database or payment rail.
+Паметта не е просто vector database. Тя изисква provenance, sensitivity, conflict resolution, expiry и отделен write-governance pipeline.
 
-Its result is never trusted as instruction. It is re-filtered as hostile evidence before returning to inference. This is the practical defence against indirect prompt injection.
+Когато е управлявана правилно, всяка задача подобрява continuity и organizational context. Това е compounding advantage, който не се копира само с достъп до същия модел.
 
-The industry terms are **tool fabric**, **commit boundary**, **capability-based authorization** and **defence in depth**.
+### 4:10–5:00 · Обратимост и operational trust
 
-## Chapter 4 — Memory is the compounding moat
+Телеметрията свързва всеки модел, tool call, разход, резултат и инцидент. Incident command може да промени flags, routing, limits, policy или да отнеме credentials.
 
-Delivery is not the end of the system.
+Enterprise автономията не означава „моделът никога не греши“. Означава: грешката се вижда, изолира, връща назад и доказва.
 
-The result produces four assets: a user-visible outcome, a candidate memory, a full execution trace and feedback about whether the real objective was achieved.
+### 5:00–5:50 · Еволюция без live weight drift
 
-Memory creates continuity and switching cost. But memory poisoning also persists across sessions, so writes need provenance, confidence, contradiction handling, sensitivity and expiry.
+Production weights не се променят на живо. Evidence минава през selection, consent/privacy gate и teacher forge, след което се създава нов signed frozen checkpoint.
 
-Telemetry is the nervous system. It supports anomaly detection, rollback, insurability, enterprise assurance and a complete chain of custody for autonomous actions.
+Това отделя runtime adaptation от generational learning и прави наследяването одитируемо.
 
-## Chapter 5 — Production becomes the next generation
+### 5:50–6:30 · Истинската атакуваема повърхност
 
-The live model does not rewrite its weights during a conversation.
+Jailbreak-ът е видим, но краткотраен. По-ценните атаки са:
 
-Production evidence enters a separate cold loop. Useful, rare, risky and gradable episodes are selected. Consent, ZDR, GDPR, PII and enterprise no-train rules determine eligibility. A teacher forge converts eligible evidence into SFT, RL, evaluation and verifier data.
+- `A5` memory poisoning — контрол между сесиите;
+- `A6` corpus poisoning — контрол между поколенията;
+- `A7` control-plane access — ефект върху цялата популация;
+- `A8` supply-chain compromise — системна загуба на доверие.
 
-Training creates a new candidate checkpoint. Evals, red teams, lineage checks, canaries and rollback capability decide whether that generation may enter production.
+### 6:30–7:00 · Финален инвестиционен кадър
 
-This is an **evaluation and data flywheel**, but controlled as model inheritance rather than uncontrolled live self-modification.
+Моделите се комодитизират. Победителят ще притежава control plane-а около интелекта: identity, memory, tools, safeguards, telemetry и evolutionary feedback.
 
-## Chapter 6 — The real battlefield
+**Ganexity не продава още един LLM интерфейс. Ganexity изгражда управляваната операционна система за автономна работа.**
 
-The visible jailbreak is not the highest-value attack.
+---
 
-The durable attacks are:
+## Español — 6–7 minutos
 
-- memory poisoning, which survives between sessions;
-- corpus poisoning, which survives between generations;
-- control-plane access, which changes routing and policy for entire populations;
-- supply-chain compromise, which breaks trust below the application layer.
+### 0:00–0:30 · Cambio de categoría
 
-The strategic security thesis is simple: attackers seek persistence and leverage. The architecture must defend identity, memory, lineage, tools and the control plane, not only the prompt.
+Lo que parece un chatbot es en realidad un sistema operativo multivelocidad alrededor de la inteligencia. El modelo es el núcleo de inferencia. El negocio defendible es la arquitectura que decide qué modelo opera, qué puede conocer, qué puede hacer, cuándo debe detenerse, qué se convierte en memoria y qué puede influir en la siguiente generación.
 
-## Closing — 30 seconds
+### 0:30–1:20 · Tres velocidades, un sistema
 
-The model layer will continue to commoditize and fragment across providers, sizes, regions and specializations.
+El mapa separa el sistema en tres cadencias:
 
-The durable enterprise platform is the layer that orchestrates those models into safe, attributable and economically bounded outcomes.
+- `ms–s`: el hot path de una tarea;
+- `min–h`: control plane, telemetría, políticas y rollback;
+- `w–mo`: entrenamiento, evals y un nuevo checkpoint congelado.
 
-Ganexity's long-term vision is to own that control surface: **control × memory × action × feedback**.
+El riesgo estratégico no es solo la inteligencia. Es el desfase entre la velocidad de cambio de la máquina y la velocidad humana de supervisión.
 
-The winner will not be the company with one model call. It will be the company that owns the governed operating system around intelligence.
+### 1:20–2:20 · Meta-controlador +1
 
-## Questions the map is designed to answer
+Después de identidad, filtrado de entrada y routing, la petición llega al `+1` local. Es la capa de apalancamiento sobre el modelo. Elige estrategia, roles, contexto, cómputo, herramientas, presupuesto, condiciones de parada y escalado.
 
-- Where exactly does policy act?
-- What changes live and what changes only between generations?
-- Where does a tool call become an irreversible external effect?
-- Which layer owns budgets and stopping conditions?
-- How is memory written, corrected and expired?
-- How can an operator reconstruct and roll back an incident?
-- Which user data is eligible to influence training?
-- What happens when a model, tool or provider is unavailable?
-- Where are the highest-leverage attack surfaces?
-- What compounds into the long-term moat?
+El modelo genera posibilidades. El `+1` convierte esas posibilidades en una operación limitada y medible.
+
+### 2:20–3:20 · Del lenguaje a la acción
+
+Tool fabric / MCP es donde el lenguaje cruza al mundo externo: navegador, API, código, archivos y pagos.
+
+Por eso cada resultado de herramienta vuelve como **entrada no confiable**. El permission gate antes de actuar y el re-filtrado después de actuar forman el límite de confianza del runtime agéntico.
+
+### 3:20–4:10 · Memoria como ventaja acumulativa
+
+La memoria no es solo una base vectorial. Requiere provenance, sensibilidad, resolución de conflictos, expiración y un pipeline separado de gobierno de escritura.
+
+Bien gobernada, cada tarea mejora la continuidad y el contexto organizativo. Es una ventaja acumulativa que no se replica solo usando el mismo modelo.
+
+### 4:10–5:00 · Reversibilidad y confianza operativa
+
+La telemetría conecta cada modelo, tool call, coste, resultado e incidente. Incident command puede cambiar flags, routing, límites, políticas o revocar credenciales.
+
+La autonomía empresarial no significa que el modelo nunca falle. Significa que el fallo se detecta, se aísla, se revierte y se demuestra.
+
+### 5:00–5:50 · Evolución sin deriva de pesos en vivo
+
+Los pesos de producción no cambian en vivo. La evidencia pasa por selección, consentimiento/privacidad y teacher forge antes de crear un nuevo checkpoint firmado y congelado.
+
+Esto separa la adaptación runtime del aprendizaje generacional y vuelve auditable la herencia.
+
+### 5:50–6:30 · La superficie de ataque real
+
+El jailbreak es visible, pero temporal. Los ataques de mayor valor son:
+
+- `A5` memory poisoning — control entre sesiones;
+- `A6` corpus poisoning — control entre generaciones;
+- `A7` acceso al control plane — impacto sobre toda la población;
+- `A8` compromiso de supply chain — pérdida sistémica de confianza.
+
+### 6:30–7:00 · Cierre de inversión
+
+Los modelos se comoditizan. El ganador poseerá el control plane alrededor de la inteligencia: identidad, memoria, herramientas, defensas, telemetría y feedback evolutivo.
+
+**Ganexity no vende otra interfaz para un LLM. Ganexity construye el sistema operativo gobernado para el trabajo autónomo.**
