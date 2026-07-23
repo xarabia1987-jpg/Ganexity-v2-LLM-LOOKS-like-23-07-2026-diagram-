@@ -23,9 +23,10 @@ Adjacent industry concepts: **agentic runtime**, **memory plane**, **model regis
 - composition inspired by an enterprise cinematic operating map;
 - 18 explicit architecture layers (`L0–L17`);
 - 43 differentiated, inspectable system and threat nodes;
+- 49 typed connections and 57 autonomous moving particles;
 - six flow channels: `CTRL`, `DATA`, `EXEC`, `FB`, `GEN`, `ADV`;
-- autonomous moving particles on every path — no play/stop controls;
-- Bulgarian and Spanish language switch;
+- no play, start or stop controls — the system flow is always alive;
+- Bulgarian and Spanish language switch across the full UI and map;
 - node intelligence panel with input, output, cadence, failure mode and strategic meaning;
 - pan, wheel zoom, fullscreen presentation and landscape PDF export;
 - responsive desktop, tablet and mobile layouts;
@@ -77,16 +78,27 @@ The static page also works when deployed through GitHub Pages.
 ## Files
 
 - `system-flow-spec-v2.md` — source-of-truth architecture specification
-- `index.html` — bilingual presentation shell
-- `styles.css` — cinematic visual system, responsive and print layout
-- `app.js` — architecture graph, translations, animated particles, inspection and navigation
-- `presentation-notes.md` — concise Bulgarian and Spanish investor script
-- `.github/workflows/pages.yml` — syntax validation and GitHub Pages deployment
+- `index.html` — bilingual presentation shell and SVG stage
+- `styles.css` — cinematic page, panels, hero and investor layout
+- `map.css` — SVG nodes, connections, particles, responsive and print presentation rules
+- `data-ui.js` — BG/ES UI, layer and flow definitions
+- `data-nodes-1.js` — sovereignty, foundation and global control-plane nodes
+- `data-nodes-2.js` — hot path, tool fabric, safeguards, memory and telemetry nodes
+- `data-nodes-3.js` — evolutionary inheritance and adversarial nodes
+- `data-edges.js` — typed graph connections and architecture invariants
+- `app.js` — rendering, automatic motion, inspection, translation and navigation runtime
+- `presentation-notes.md` — complete Bulgarian and Spanish investor script
+- `.github/workflows/pages.yml` — validation and GitHub Pages deployment
 
 ## Validation
 
 ```bash
+node --check data-ui.js
+node --check data-nodes-1.js
+node --check data-nodes-2.js
+node --check data-nodes-3.js
+node --check data-edges.js
 node --check app.js
 ```
 
-The GitHub Actions workflow validates the JavaScript and required presentation files on pull requests and deploys the static site from `main`.
+The GitHub Actions workflow validates every JavaScript module and all required presentation assets on pull requests, then deploys the static site from `main`.
